@@ -28,7 +28,8 @@ Here is the list of the variables that can be found in the raw dataset:
 - `Price` – Selling price of the car (in €)
 
 **Features:**
-- `Id` - The row index 
+- `Id` - The row index
+- `Model` - The model of the car
 - `Age_08_04` - The age of the car in months
 - `Mfg_Month` - The month in a given year the car was manufactured
 - `Mfg_Year` - The year the car was manufactured
