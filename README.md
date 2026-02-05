@@ -9,25 +9,35 @@
 - [Insights](#insights)
 - [How to Run](#how-to-run)
 
-
-
 ## Project Overview
-In this project I use daily prices and financial statement data of 50 public U.S companies  to create measures in order to assess their exposure to default and market risk over a time horizon of  9 years.
 
-The analysis includes data cleaning, exploratory data analysis and the creation, assessment and visualization of robust risk-related financial metrics. 
+For this project, I use a dataset that contains information about 1436 Toyota Corolla Cars in order to predict their prices.
+
+The analysis includes data cleaning, data visualization, feature engineering, linear modeling, nonlinear modeling and a wide range of statistical and ML algorithms to gain insights about the behaviour of the employed models.
 
 The analysis is performed in Python. 
 
 ## Data
-There are 3 datasets used for the analysis:
+A single dataset that is used for the analysis. The dataset can be found on: https://www.kaggle.com/datasets/klkwak/toyotacorollacsv/data
 
-* The first dataset includes the daily prices of the companies. 
-* The second dataset includes annual financial statements variables and accounting ratios. 
-* The third dataset includes yearly equity and debt values of companies.
+The dataset includes information regarding the prices and multiple features of 1436 Toyota Corolla Cars.
 
-The datasets include information about 50 public U.S companies, continuous members of the S&amp;P 500 Index, for the period spanning from 2012 to 2022.
-The companies included represent the following sectors: Information Technology, Communication Services, Healthcare, Consumer Staples, Consumer Discretionary, Industrials, Energy and Utilities.
-Including different sectors allows us to obtain a more diversified portfolio. Also, it opens the door for a sector analysis if deemed necessary.
+## Target Variable and Features
+
+**Response Variable (Target):**
+- `Price` – Selling price of the Toyota Corolla (EUR)
+
+**Predictor Variables (Features):**
+- `Age_08_04` – Age of the car in months
+- `KM` – Accumulated kilometers
+- `Fuel_Type` – Petrol, Diesel, or CNG
+- `HP` – Horsepower
+- `Met_Color` – Metallic color (binary)
+- `Automatic` – Automatic transmission (binary)
+- `CC` – Engine size (cc)
+- `Doors` – Number of doors
+- `Weight` – Car weight (kg)
+
 
 Note that datasets that are generated during the analysis can be found in data_created folder in the data folder.
 Note that graphs generated during the analysis can be found in the graphs folder.
