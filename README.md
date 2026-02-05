@@ -73,7 +73,7 @@ Note that graphs generated during the analysis can be found in the graphs folder
 Note that you can always delete the data_created and graphs folder. They will get generated again when you run the .py files.
 
 ## Tools and Technologies
-* Python (Libraries: Pandas, NumPy, SciPy, Matplotlib)
+* Python (Libraries: os, Pandas, NumPy, SciPy, Matplotlib, sklearn)
 
 ## Analysis Workflow
 * First, I inspect the raw data.
