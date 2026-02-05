@@ -25,21 +25,46 @@ The dataset includes information regarding the prices and multiple features of 1
 Here is the list of the variables that can be found in the raw dataset:
 
 **Response Variable:**
-- `Price` – Selling price of the Toyota Corolla (EUR)
+- `Price` – Selling price of the car (in €)
 
 **Features:**
-- `Id` – The row index 
-- `Age_08_04` – Age of the car in months
-- `Mfg_Month` - The month in a give year the car was manufactured
-- `Mfg_Year` 
-- `KM` – Accumulated kilometers
-- `Fuel_Type` – Petrol, Diesel, or CNG
-- `HP` – Horsepower
-- `Met_Color` – Metallic color (binary)
-- `Automatic` – Automatic transmission (binary)
-- `CC` – Engine size (cc)
-- `Doors` – Number of doors
-- `Weight` – Car weight (kg)
+- `Id` - The row index 
+- `Age_08_04` - The age of the car in months
+- `Mfg_Month` - The month in a given year the car was manufactured
+- `Mfg_Year` - The year the car was manufactured
+- `KM` -  The mileage of the car (measured in Kilometers)
+- `Fuel_Type` - The fuel type of the car (Petrol, Diesel, or CNG)
+- `HP` - The horsepower of the car
+- `Met_Color` - Binary indicator that shows whether the car has a metallic color (1 = Metallic, 0 = Not Metallic)
+- `Color` - The color of the car (e.g. Blue, Red, Green etc.)
+- `Automatic` - Binary indicator of automatic transmission of the car (1 = automatic, 0 = manual)
+- `CC` - The engine size of the car
+- `Doors` – The number of doors the car has
+- `Cylinders` – The number of cylinders the car has
+- `Gears` - The number of gears the car has
+- `Quarterly_Tax` - Quarterly Tax of the car (in €)
+- `Weight` - The weight of the car (in kilograms)
+- `Mfr_Guarantee` - Binary indicator of whether the car has a manufacturing guarantee (1 = yes, 0 = no)
+- `BOVAG_Guarantee` - Binary indicator of whether the car has a BOVAG guarantee (1 = yes, 0 = no)
+- `Guarantee_Period` - The number of months a car has in guarantee when purchased
+- `ABS` - Binary indicator of ABS (1 = yes, 0 = no)
+- `Airbag_1` - Binary indicator of whether the car has an airbag (1 = yes, 0 = no)
+- `Airbag_2` - Binary indicator of whether the car has a second airbag (1 = yes, 0 = no)
+- `Airco` - Binary indicator of aircondition (1 = yes, 0 = no)
+- `Automatic_airco` - Binary indicator of automatic aircondition (1 = yes, 0 = no)
+- `Boardcomputer` - Binary indicator of board computer in the car (1 = yes, 0 = no)
+- `CD_Player` – Binary indicator of CD player in the car (1 = yes, 0 = no)
+- `Central_Lock` – Binary indicator of central locking system (1 = yes, 0 = no)
+- `Powered_Windows` – Binary indicator of powered windows (1 = yes, 0 = no)
+- `Power_Steering` – Binary indicator of power steering (1 = yes, 0 = no)
+- `Radio` – Binary indicator of radio in the car (1 = yes, 0 = no)
+- `Mistlamps` – Binary indicator of mist lamps (1 = yes, 0 = no)
+- `Sport_Model` – Binary indicator of sport model version (1 = yes, 0 = no)
+- `Backseat_Divider` – Binary indicator of backseat divider (1 = yes, 0 = no)
+- `Metallic_Rim` – Binary indicator of metallic rims (1 = yes, 0 = no)
+- `Radio_cassette` – Binary indicator of radio cassette player (1 = yes, 0 = no)
+- `Parking_Assistant` – Binary indicator of parking assistant system (1 = yes, 0 = no)
+- `Tow_Bar` – Binary indicator of tow bar (1 = yes, 0 = no)
 
 
 Note that datasets that are generated during the analysis can be found in data_created folder in the data folder.
