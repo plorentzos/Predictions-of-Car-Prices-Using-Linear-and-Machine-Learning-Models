@@ -22,13 +22,16 @@ A single dataset that is used for the analysis. The dataset can be found on: htt
 
 The dataset includes information regarding the prices and multiple features of 1436 Toyota Corolla Cars.
 
-## Target Variable and Features
+Here is the list of the variables that can be found in the raw dataset:
 
-**Response Variable (Target):**
+**Response Variable:**
 - `Price` – Selling price of the Toyota Corolla (EUR)
 
-**Predictor Variables (Features):**
+**Features:**
+- `Id` – The row index 
 - `Age_08_04` – Age of the car in months
+- `Mfg_Month` - The month in a give year the car was manufactured
+- `Mfg_Year` 
 - `KM` – Accumulated kilometers
 - `Fuel_Type` – Petrol, Diesel, or CNG
 - `HP` – Horsepower
