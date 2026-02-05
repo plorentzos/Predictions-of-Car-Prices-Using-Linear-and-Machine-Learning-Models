@@ -1,0 +1,2 @@
+# Predictions-of-Car-Prices-Using-Linear-and-Machine-Learning-Models
+In this project a dataset that includes Toyota Cars Prices and multiple features used to predict those prices, is used. Data cleaning, visualization and feature engineering techniques are used. Finally, multiple linear and nonlinear(ML) models are constructed to predict these prices. The predictions are evaluated using a range of metrics and plots.
