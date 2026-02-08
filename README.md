@@ -125,14 +125,26 @@ Note that additional comments regarding the code and the analysis can be found i
 
  
 ## Insights
-Below I present a table the contains the evaluation metrics for most of the models used for the analysis. You can find by running the code for the models I do not include here, but I find it uneccessary to present here their metrics. Overally, I choose to not include in the table the simple linear regression results and the not-tuned(baseline) ML models results.
+I present below a table thats contains the evaluation metrics for most of the models used for the analysis. You can find by running the code for the models I do not include here, but I find it uneccessary to present here their metrics. Overall, I choose to not include in the table the simple linear regression results and the not-tuned(baseline) ML models results.
+
+| Model | R² | RMSE (€) | MAE (€) |
+|------|----:|---------:|--------:|
+| OLS (Simple) | 0.7034 | 1,557.06 | 1,058.85 |
+| OLS (Multiple) | 0.8582 | 1,172.58 | 834.30 |
+| OLS (Reduced) | 0.8586 | 1,169.86 | 828.40 |
+| Ridge (CV) | 0.8572 | 1,134.11 | 831.42 |
+| Random Forest (Baseline) | 0.8531 | 1,261.98 | 841.57 |
+| Random Forest (Tuned) | 0.8774 | 1,085.95 | 766.17 |
+| Random Forest (Post-PIF) | 0.8514 | 1,259.85 | 853.16 |
+| Random Forest (Retuned, Post-PIF) | 0.8783 | 1,083.74 | 770.10 |
+| Gradient Boosting (Tuned, Post-PIF) | 0.8790 | 1,051.98 | 757.09 |
 
 ## How to Run 
 1. Make sure you have at least Python version 3.9+ installed in your personal computer.
 2. Clone the repository.
 3. Open the repository using your preferred IDE(e.g. VS Code).
 4. Navigate to the project folder where you saved the repo:
-   cd Default-and-Market-Risk-Assessment-of-Public-US-Companies
+   cd Predictions-of-Car-Prices-Using-Linear-and-Machine-Learning-Models
 5. Create a virtual environment using uv: python -m uv venv
 6. Activate the virtual environment according to the operating system you use(e.g. Windows, Linux, macOS).
 7. Install the necessary libraries in the activated virtual environment:
