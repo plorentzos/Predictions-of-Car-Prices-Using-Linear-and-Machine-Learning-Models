@@ -127,19 +127,23 @@ Note that additional comments regarding the code and the analysis can be found i
 ## Insights
 I present below a table thats contains the evaluation metrics for most of the models used for the analysis. You can find by running the code for the models I do not include here, but I find it uneccessary to present here their metrics. Overall, I choose to not include in the table the simple linear regression results and the not-tuned(baseline) ML models results.
 
-| Model | R² | RMSE (€) | MAE (€) |
-|------|----:|---------:|--------:|
-| Multiple OLS| 0.8582 | 1,172.58 | 834.30 |
-| Reduced Post-Lasso OLS | 0.8586 | 1,169.86 | 828.40 |
-| RidgeCV | 0.8572 | 1,184.11 | 831.42 |
-| RF Tuned | 0.8774 | 1,085.56 | 766.17 |
-| RF Post-PIF Tuned | 0.8783 | 1,083.74 | 770.10 |
-| GBM Post-PIF Tuned | 0.8790 | 1,051.98 | 757.09 |
+| Model | MAE (€) | RMSE (€) | R² |
+|------|--------:|---------:|---:|
+| Multiple OLS | 834.30 | 1,172.58 | 0.8582 |
+| Reduced Post-Lasso OLS | 828.40 | 1,169.86 | 0.8586 |
+| RidgeCV | 831.42 | 1,184.11 | 0.8572 |
+| RF Tuned | 766.17 | 1,085.56 | 0.8774 |
+| RF Post-PIF Tuned | 770.10 | 1,083.74 | 0.8783 |
+| GBM Post-PIF Tuned | 757.09 | 1,051.98 | 0.8790 |
 
-OLS Stands for Ordinary Leaset Squared, RidgeCV stands for Cross Validated Ridge Regression, RF stands for Random Forest, GBM stands for Gradient Boosting Machine.
 
-All metrics confirm the robustness of the modeling assumptions. 
-Hence, based on performance all metrics so that GBM (Gradient Boosting Machine) algorithm has the best performance
+OLS stands for Ordinary Least Squares, RidgeCV stands for Cross Validated Ridge Regression, RF stands for Random Forest, GBM stands for Gradient Boosting Machine.
+
+MAE is the Mean Absolute Error, RMSE is the Root Mean Square Error, R² is the coefficient of determination.
+
+In terms of goodness of fit, all models perform relatively similarly. There is an increase of about 2% in R-squared when moving from linear to nonlinear models. However, there are substantial differences when comparing MAE and RMSE across models. Since the task is price prediction, we rely primarily on MAE. Using our best-performing model (GBM), predictions are on average off by only €757.09. GBM also performs best when evaluated using RMSE, indicating its ability to produce fewer severe pricing errors. Note that RMSE is larger than MAE for all models, indicating that when poor price predictions occur, the errors can sometimes be large.
+
+Overall, the results show clearly that GBM is the best model to predict car prices with the given dataset.
 
 ## How to Run 
 1. Make sure you have at least Python version 3.9+ installed in your personal computer.
