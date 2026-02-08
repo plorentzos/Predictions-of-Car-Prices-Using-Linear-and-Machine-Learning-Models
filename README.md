@@ -85,7 +85,13 @@ The following relate to toyota_cleaned.py script:
 
 ### Inspecting the Response Variable (Car Prices)
 The following relate to prices_insights.py:
-*
+* Imported the cleaned dataset and inspected it for one more time to be sure it is ok to go.
+* Made a histogram and kde plot to view the distribution of prices.
+* Assessed the relationship of price with the seemingly most important features via scatterplots and simple linear regressions.
+* Plotted the residuals of the Price ~ Age linear regression to check for heteroskedasticity. Log transformed prices to eliminate heteroskedastic errors.
+
+### Feature Engineering:
+The following relate to feature_engineering.py:
 
 Note that additional comments regarding the code and the analysis can be found in the .py files.
 
