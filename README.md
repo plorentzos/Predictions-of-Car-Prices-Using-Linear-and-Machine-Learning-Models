@@ -77,9 +77,10 @@ Note that you can always delete the data_created and graphs folder. They will ge
 
 ## Analysis Workflow
 
-### Cleaning the data
-* Initially, the raw dataset is loaded and the first 5 rows are printed to get a sense of what the data consists of.
-* Column renaming takes place
+### Cleaning the data 
+The following relate to toyota_cleaned.py script.
+* The raw dataset is loaded and the first 5 rows are printed to get a sense of what the data consists of.
+* Data Inspection and column renaming
 * Then I rename column names for better interpretability.
 * I transform the data according to what is more optimal to perform the analysis.
 * I check for missing values and duplicates. I overview the data type of each variable and the dimensions of the whole dataset.
