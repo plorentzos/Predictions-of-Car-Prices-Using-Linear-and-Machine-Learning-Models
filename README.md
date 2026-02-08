@@ -78,14 +78,14 @@ Note that you can always delete the data_created and graphs folder. They will ge
 ## Analysis Workflow
 
 ### Cleaning the data 
-The following relate to toyota_cleaned.py script.
-* The raw dataset is loaded and the first 5 rows are printed to get a sense of what the data consists of.
-* Data Inspection and column renaming
-* Then I rename column names for better interpretability.
-* I transform the data according to what is more optimal to perform the analysis.
-* I check for missing values and duplicates. I overview the data type of each variable and the dimensions of the whole dataset.
-* I do some final checks to see if the dataset is nice and tidy before I start the analysis.
-* Finally in each file, besides the correlations one, I create a risk measure and visualize it accordingly. The correlations_between_measures.py contains the correlations calculation and visualization between Altman's Z score, Merton's DD ,and Value at Risk risk measures.
+The following relate to toyota_cleaned.py script:
+* Loaded the raw dataset, performed initial data inspection and renamed columns to improve readibility and consistency.
+* Inspected variables data types, performed whitespace trimming, separated numerical and categorical variables.
+* Plotted the response variable against features that take a significant amount of unique values (i.e. non binary variables) to find out outliers, invalid data and their relationships with prices.
+
+### Inspecting the Response Variable (Car Prices)
+The following relate to prices_insights.py:
+*
 
 Note that additional comments regarding the code and the analysis can be found in the .py files.
 
