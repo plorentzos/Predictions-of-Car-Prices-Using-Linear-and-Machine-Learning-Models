@@ -82,6 +82,7 @@ The following relate to toyota_cleaned.py script:
 * Loaded the raw dataset, performed initial data inspection and renamed columns to improve readibility and consistency.
 * Inspected variables data types, performed whitespace trimming, separated numerical and categorical variables.
 * Plotted the response variable against features that take a significant amount of unique values (i.e. non binary variables) to find out outliers, invalid data and their relationships with prices.
+* Dropped variables that are not useful for the analysis. Checked for missing values and duplicate rows.
 
 ### Inspecting the Response Variable (Car Prices)
 The following relate to prices_insights.py:
@@ -92,6 +93,17 @@ The following relate to prices_insights.py:
 
 ### Feature Engineering:
 The following relate to feature_engineering.py:
+* Performed feature engineering on multiple features by combining them, changing their structure or dropping them.
+* Plotted a correlation heatmap of the full cleaned and engineered dataset to see the association between variables and further assess potential issues.
+* Constructed a Variance Inflation Factor (VIF) to adress any multicollinearity concerns that I was not able to see with plots and ispection.
+* The dataset is now ready for modeling!
+* 
+### Linear Modeling:
+The following relate to linear_modeling.py:
+* Transformed prices to log prices to use as a response variable based on previous insights.
+* For all the models the following took place:
+- Splitted the dataset into training set and test set (80%-20%)
+
 
 Note that additional comments regarding the code and the analysis can be found in the .py files.
 
