@@ -130,7 +130,7 @@ Note that additional comments regarding the code and the analysis can be found i
 ## Assumptions
 * The dataset's size is large enough to train/test split and apply the various statistical methods and models.
 * Splitting train = 80%, test = 20% is textbook standard. Did not choose to split to train, test and validations sets. Used CV to validate the training sets.
-* Residual diagnostics indicated heteroskedasticity in the original simple regression model. This subsequently stays for all of the models. Hence prices are transformed to log prices to eliminate most of the heteroskedasticity.
+* Residual diagnostics indicated heteroskedasticity in the original simple regression model. This subsequently stays for all of the models. Hence, prices are transformed to log prices to eliminate most of the heteroskedasticity.
 * A number of features that are in dataset introduce noise to the models since they either give irrelevant information or are highly collinear with another feature. Hence, they are dropped before modeling.
 * Used Ordinary Least Squares methods initially to understand what is happening with the dataset and gain insights since OLS is easy to interpret. For OLS methods, the error terms are assumed to be normal distributed with 0 mean and finite variance.
 * Use ML algorithms since we do predictions and not causal inference. The dataset is sizeable enough for these methods.
