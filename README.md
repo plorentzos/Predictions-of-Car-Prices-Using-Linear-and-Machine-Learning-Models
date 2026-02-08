@@ -83,7 +83,7 @@ Note that you can always delete the data_created and graphs folder. They will ge
 ## Tools and Technologies
 * Python (Libraries: os, Pandas, NumPy, Seaborn, Matplotlib, sklearn)
 
-## Analysis Workflow
+## Project Workflow
 
 ### Cleaning the data 
 The following relate to toyota_cleaned.py script:
