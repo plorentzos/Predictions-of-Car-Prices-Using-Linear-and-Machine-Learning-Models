@@ -78,7 +78,8 @@ Note that you can always delete the data_created and graphs folder. They will ge
 ## Analysis Workflow
 
 ### Cleaning the data
-* First, I inspect the raw data.
+* Initially, the raw dataset is loaded and the first 5 rows are printed to get a sense of what the data consists of.
+* Column renaming takes place
 * Then I rename column names for better interpretability.
 * I transform the data according to what is more optimal to perform the analysis.
 * I check for missing values and duplicates. I overview the data type of each variable and the dimensions of the whole dataset.
