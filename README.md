@@ -102,19 +102,28 @@ The following relate to feature_engineering.py:
 The following relate to linear_modeling.py:
 
 * Transformed prices to log prices to use as a response variable based on previous insights. 
-* Constructed all the models based on the following workflow:
+* Constructed all the models (Simple OLS, Multiple OLS, Reduced OLS, Ridge Regression) based on the following workflow:
 Splitted the dataset into training set and test set (80-20 split). Created a pipeline to transform and scale features. Fitted the pipeline to the training data. Predicted using the features test set. Performed a 10-Fold Cross Validation on the training sets to assess model performance using R-squared as the metric. Made a decision rule to assess if the model overfits. Transformed log prices back to prices in order to plot actual vs predicted prices and relative errors. Calculated Mean Absolute Error and Root Mean Squared Error as additional metrics.
-* 
+* Performed regularization via Lasso(L1), Ridge(L2) and ElasticNet. Plotted Lasso paths.
+
+### Nonlinear Modeling:
+The following relate to nonlinear_modeling.py:
+
+* Performed similar workflow as in linear modeling section bullets 1 and 2.
+* Tuned the hyperparameters  for all of the  Machine Learning models (Random Forests, Gradient Boosting). (I provide the optimal hyperparameters so you do not waste time running all iterations, read the code comments for further information!!!)
+* Performed Permutation Feature Importances (PIF) to optimize further the models by dropping features that do not contribute to goodness of fit.
 
 
 Note that additional comments regarding the code and the analysis can be found in the .py files.
 
 ## Modeling Assumptions
-* Daily and yearly returns are being calculated using the standard finance textbook formulas with continuous compounding.
-* For Altman's Z Score refer to the non-manufacturer bankruptcy model on https://en.wikipedia.org/wiki/Altman_Z-score
-* For Merton's Distance to Default refer to "Forecasting Default with Merton Distance to Default Model" (Bharath et. al 2008) , particularly section 2.3.
-* Value At Risk and Expected Shortfall are calculated using the standard textbook formulas. In any case, you can refer to Quantitative Risk Management book (McNeil et. al) chapter 2.3.
+* The dataset's size is large enough to train/test split and apply the various statistical methods and models.
+* Residual diagnostics indicated heteroskedasticity in the original simple regression model. This subsequently stays for all of the models. Hence prices are transformed to log prices to eliminate most of the heteroskedasticity.
+* Used Ordinary Least Squares methods initially to understand what is happening with the dataset and gain insights since the models are interpretable. For OLS methods, Assume the errors terms are normal distributed with 0 mean and finite variance.
+* Use ML algorithms since we do predictions and not causal inference. The dataset is sizeable enough for these methods.
+* Measure the model performance on how high the R-Squared is but also rely on MAE and RMSE as additional metrics to get a sense how good the predictions are related to prices in euros, outliers in the dataset and penalties imposed on the error terms.
 
+ 
 ## Insights
 * According to the cross-sectional  average Z-Score metric, our portfolio is considered to be in the 'safe zone' indicating a negligible risk of default. However, it seems that there is an downward trend over time, showing that these companies have gotten less financially "healthy" over time. Of course, as seen in the Z-score yearly table, some of the companies in our portfolio are considered to be in the 'distress zone' as they have Z-scores less than 1.10. For these companies, we can cross-check their risk of default using Merton's DD measure (or the naive default probabilities derived using it). If both measures indicate that the company is in the 'distress zone' we should consider excluding it from our portfolio of stocks if we are a risk-averse investor.
   
