@@ -136,6 +136,10 @@ I present below a table thats contains the evaluation metrics for most of the mo
 | RF Post-PIF Tuned | 0.8783 | 1,083.74 | 770.10 |
 | GBM Post-PIF Tuned | 0.8790 | 1,051.98 | 757.09 |
 
+OLS Stands for Ordinary Leaset Squared, RidgeCV stands for Cross Validated Ridge Regression, RF stands for Random Forest, GBM stands for Gradient Boosting Machine.
+
+All metrics confirm the robustness of the modeling assumptions. 
+Hence, based on performance all metrics so that GBM (Gradient Boosting Machine) algorithm has the best performance
 
 ## How to Run 
 1. Make sure you have at least Python version 3.9+ installed in your personal computer.
