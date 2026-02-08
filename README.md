@@ -129,15 +129,13 @@ I present below a table thats contains the evaluation metrics for most of the mo
 
 | Model | R² | RMSE (€) | MAE (€) |
 |------|----:|---------:|--------:|
-| OLS (Simple) | 0.7034 | 1,557.06 | 1,058.85 |
-| OLS (Multiple) | 0.8582 | 1,172.58 | 834.30 |
-| OLS (Reduced) | 0.8586 | 1,169.86 | 828.40 |
-| Ridge (CV) | 0.8572 | 1,134.11 | 831.42 |
-| Random Forest (Baseline) | 0.8531 | 1,261.98 | 841.57 |
-| Random Forest (Tuned) | 0.8774 | 1,085.95 | 766.17 |
-| Random Forest (Post-PIF) | 0.8514 | 1,259.85 | 853.16 |
-| Random Forest (Retuned, Post-PIF) | 0.8783 | 1,083.74 | 770.10 |
-| Gradient Boosting (Tuned, Post-PIF) | 0.8790 | 1,051.98 | 757.09 |
+| Multiple OLS| 0.8582 | 1,172.58 | 834.30 |
+| Reduced Post-Lasso OLS | 0.8586 | 1,169.86 | 828.40 |
+| RidgeCV | 0.8572 | 1,184.11 | 831.42 |
+| RF Tuned | 0.8774 | 1,085.56 | 766.17 |
+| RF Post-PIF Tuned | 0.8783 | 1,083.74 | 770.10 |
+| GBM Post-PIF Tuned | 0.8790 | 1,051.98 | 757.09 |
+
 
 ## How to Run 
 1. Make sure you have at least Python version 3.9+ installed in your personal computer.
