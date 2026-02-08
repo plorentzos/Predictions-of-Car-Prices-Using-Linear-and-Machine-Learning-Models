@@ -11,16 +11,24 @@
 
 ## Project Overview
 
-For this project, I use a dataset that contains information about 1436 Toyota Corolla Cars in order to predict their prices.
+For this project, a dataset that contains information about 1436 Toyota Corolla Cars is used. 
 
-The analysis includes data cleaning, data visualization, feature engineering, linear modeling, nonlinear modeling and a wide range of statistical and ML algorithms to gain insights about the behaviour of the employed models.
+The aim of the project is to find the best model to predict car prices.
 
-The analysis is performed in Python. 
+The analysis includes data cleaning, data visualization, feature engineering, statistical modeling, linear modeling and machine learning in order make accurate predictions of car prices.
+
+Multiple models are constructed based on standard textbook statistical and mathematical techniques. 
+
+Instead of just presenting "the single best model", the analysis presents findings from multiple traditional and state-of-the-art models that serve as robustness checks for the most optimal model. 
+
+Essentially, as it can been seen in the code the modeling logic is to start simple and build stepwise better (and perhaps more complicated) methods in order to arrive to the optimal result. This logic gives the reader not only a better sense in the coding workflow but also depicts the intuition behind the choices taken during the project.
+
+The analysis is performed in Python programming language. The IDE used is Visual Studio Code. 
 
 ## Data
-A single dataset that is used for the analysis. The dataset can be found on: https://www.kaggle.com/datasets/klkwak/toyotacorollacsv/data
+A single dataset  is used for the analysis. The dataset can be found on: https://www.kaggle.com/datasets/klkwak/toyotacorollacsv/data
 
-The dataset includes information regarding the prices and multiple features of 1436 Toyota Corolla Cars.
+The dataset includes information regarding the prices and multiple features of 1436 Toyota Corolla Cars. 
 
 Here is the list of the variables that can be found in the raw dataset:
 
@@ -44,7 +52,7 @@ Here is the list of the variables that can be found in the raw dataset:
 - `Cylinders` – The number of cylinders the car has
 - `Gears` - The number of gears the car has
 - `Quarterly_Tax` - Quarterly Tax of the car (in €)
-- `Weight` - The weight of the car (in kilograms)
+- `Weight` - The weight of the car (in Kilograms)
 - `Mfr_Guarantee` - Binary indicator of whether the car has a manufacturing guarantee (1 = yes, 0 = no)
 - `BOVAG_Guarantee` - Binary indicator of whether the car has a BOVAG guarantee (1 = yes, 0 = no)
 - `Guarantee_Period` - The number of months a car has in guarantee when purchased
@@ -70,7 +78,7 @@ Here is the list of the variables that can be found in the raw dataset:
 
 Note that datasets that are generated during the analysis can be found in data_created folder in the data folder.
 Note that graphs generated during the analysis can be found in the graphs folder.
-Note that you can always delete the data_created and graphs folder. They will get generated again when you run the .py files.
+Note that you can always delete the data_created and graphs folder. They will get generated again when you run the .py files in the folder you save the cloned repository.
 
 ## Tools and Technologies
 * Python (Libraries: os, Pandas, NumPy, Seaborn, Matplotlib, sklearn)
@@ -79,23 +87,26 @@ Note that you can always delete the data_created and graphs folder. They will ge
 
 ### Cleaning the data 
 The following relate to toyota_cleaned.py script:
+
 * Loaded the raw dataset, performed initial data inspection and renamed columns to improve readibility and consistency.
-* Inspected variables data types, performed whitespace trimming, separated numerical and categorical variables.
+* Inspected variables data types, performed whitespace trimming, classified the datatypes of each feature(e.g. numerical feature etc.)
 * Plotted the response variable against features that take a significant amount of unique values (i.e. non binary variables) to find out outliers, invalid data and their relationships with prices.
 * Dropped variables that are not useful for the analysis. Checked for missing values and duplicate rows.
 
 ### Inspecting the Response Variable (Car Prices)
 The following relate to prices_insights.py:
-* Imported the cleaned dataset and inspected it for one more time to be sure it is ok to go.
+
+* Imported the cleaned dataset and inspected it again.
 * Made a histogram and kde plot to view the distribution of prices.
 * Assessed the relationship of price with the seemingly most important features via scatterplots and simple linear regressions.
 * Plotted the residuals of the Price ~ Age linear regression to check for heteroskedasticity. Log transformed prices to eliminate heteroskedastic errors.
 
 ### Feature Engineering:
 The following relate to feature_engineering.py:
+
 * Performed feature engineering on multiple features by combining them, changing their structure or dropping them.
 * Plotted a correlation heatmap of the full cleaned and engineered dataset to see the association between variables and further assess potential issues.
-* Constructed a Variance Inflation Factor (VIF) to adress any multicollinearity concerns that I was not able to see with plots and ispection.
+* Constructed a Variance Inflation Factor (VIF) to adress any multicollinearity concerns that could not be salient from the data inspection and correlation heatmap.
 * The dataset is now ready for modeling!
 
 ### Linear Modeling:
@@ -103,29 +114,31 @@ The following relate to linear_modeling.py:
 
 * Transformed prices to log prices to use as a response variable based on previous insights. 
 * Constructed all the models (Simple OLS, Multiple OLS, Reduced OLS, Ridge Regression) based on the following workflow:
-Splitted the dataset into training set and test set (80-20 split). Created a pipeline to transform and scale features. Fitted the pipeline to the training data. Predicted using the features test set. Performed a 10-Fold Cross Validation on the training sets to assess model performance using R-squared as the metric. Made a decision rule to assess if the model overfits. Transformed log prices back to prices in order to plot actual vs predicted prices and relative errors. Calculated Mean Absolute Error and Root Mean Squared Error as additional metrics.
+Splitted the dataset into training set and test set (80-20 split). Created a pipeline to transform and scale features. Fitted the pipeline to the training data. Predicted using the features test set. Performed a 10-Fold Cross Validation on the training sets to assess model performance using R-squared as the metric. Made a robust decision rule to assess if the model overfits, if the test score is significantly higher than the training score or if everything is ok. Transformed log prices back to prices in order to plot actual vs predicted prices and relative errors. Calculated Mean Absolute Error and Root Mean Squared Error as additional metrics.
 * Performed regularization via Lasso(L1), Ridge(L2) and ElasticNet. Plotted Lasso paths.
 
 ### Nonlinear Modeling:
 The following relate to nonlinear_modeling.py:
 
 * Performed similar workflow as in linear modeling section bullets 1 and 2.
-* Tuned the hyperparameters  for all of the  Machine Learning models (Random Forests, Gradient Boosting). (I provide the optimal hyperparameters so you do not waste time running all iterations when doing grid search, read the code comments for further information!!!)
-* Performed Permutation Feature Importances (PIF) to optimize further the models by dropping features that do not contribute to goodness of fit.
-* Re-fitted and re-tuned the models Post-PIF.
+* Tuned the hyperparameters  for all of the  Machine Learning models (Random Forests, Gradient Boosting). (!!!I provide the optimal hyperparameters so you do not waste time running all iterations when doing grid search, read the code comments for further information!!!)
+* Performed Permutation Feature Importances (PIF) to optimize further the models by selecting a subset of features deemed as important.
+* Re-fitted and re-tuned the models post PIF.
 
 Note that additional comments regarding the code and the analysis can be found in the .py files.
 
-## Modeling Assumptions
+## Assumptions
 * The dataset's size is large enough to train/test split and apply the various statistical methods and models.
+* Splitting train = 80%, test = 20% is textbook standard. Did not choose to split to train, test and validations sets. Used CV to validate the training sets.
 * Residual diagnostics indicated heteroskedasticity in the original simple regression model. This subsequently stays for all of the models. Hence prices are transformed to log prices to eliminate most of the heteroskedasticity.
-* Used Ordinary Least Squares methods initially to understand what is happening with the dataset and gain insights since the models are interpretable. For OLS methods, Assume the errors terms are normal distributed with 0 mean and finite variance.
+* A number of features that are in dataset introduce noise to the models since they either give irrelevant information or are highly collinear with another feature. Hence, they are dropped before modeling.
+* Used Ordinary Least Squares methods initially to understand what is happening with the dataset and gain insights since OLS is easy to interpret. For OLS methods, the error terms are assumed to be normal distributed with 0 mean and finite variance.
 * Use ML algorithms since we do predictions and not causal inference. The dataset is sizeable enough for these methods.
 * Measure the model performance on how high the R-Squared is but also rely on MAE and RMSE as additional metrics to get a sense how good the predictions are related to prices in euros, outliers in the dataset and penalties imposed on the error terms.
 
  
 ## Insights
-I present below a table thats contains the evaluation metrics for most of the models used for the analysis. You can find by running the code for the models I do not include here, but I find it uneccessary to present here their metrics. Overall, I choose to not include in the table the simple linear regression results and the not-tuned(baseline) ML models results.
+A table is presented below thats contains the evaluation metrics for most of the models used for the analysis. There are multiple models in the code that are not shown in the table. Those models are considered as pre-requisite steps to find the optimal model using each different technique. Specifically, the simple linear regression results and the not-tuned(baseline) ML models results are not presented for simplicity reasons.
 
 | Model | MAE (€) | RMSE (€) | R² |
 |------|--------:|---------:|---:|
@@ -141,7 +154,7 @@ OLS stands for Ordinary Least Squares, RidgeCV stands for Cross Validated Ridge 
 
 MAE is the Mean Absolute Error, RMSE is the Root Mean Square Error, R² is the coefficient of determination.
 
-In terms of goodness of fit, all models perform relatively similarly. There is an increase of about 2% in R-squared when moving from linear to nonlinear models. However, there are substantial differences when comparing MAE and RMSE across models. Since the task is price prediction, we rely primarily on MAE. Using our best-performing model (GBM), predictions are on average off by only €757.09. GBM also performs best when evaluated using RMSE, indicating its ability to produce fewer severe pricing errors. Note that RMSE is larger than MAE for all models, indicating that when poor price predictions occur, the errors can sometimes be large.
+For all of the models there were no signs of overfitting or test R-squared being significantly higher than the train R-squared score, hence all models show good 'behavior'. In terms of goodness of fit, all models perform relatively similarly. There is an increase of about 2% in R-squared when moving from linear to nonlinear models. However, there are substantial differences when comparing MAE and RMSE across models. Since the task is price prediction, we rely primarily on MAE. Using our best-performing model (GBM), predictions are on average off by only €757.09. GBM also performs best when evaluated using RMSE, indicating its ability to produce fewer severe pricing errors. Note that RMSE is larger than MAE for all models, indicating that when poor price predictions occur, the errors can sometimes be large.
 
 Overall, the results show clearly that GBM is the best model to predict car prices with the given dataset.
 
@@ -151,7 +164,7 @@ Overall, the results show clearly that GBM is the best model to predict car pric
 3. Open the repository using your preferred IDE(e.g. VS Code).
 4. Navigate to the project folder where you saved the repo:
    cd Predictions-of-Car-Prices-Using-Linear-and-Machine-Learning-Models
-5. Create a virtual environment using uv: python -m uv venv
+5. Create a virtual environment using uv: python -m venv your_preferred_venv_name
 6. Activate the virtual environment according to the operating system you use(e.g. Windows, Linux, macOS).
 7. Install the necessary libraries in the activated virtual environment:
    python -m pip install -r requirements.txt
