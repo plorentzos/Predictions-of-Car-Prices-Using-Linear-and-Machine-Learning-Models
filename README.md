@@ -97,12 +97,14 @@ The following relate to feature_engineering.py:
 * Plotted a correlation heatmap of the full cleaned and engineered dataset to see the association between variables and further assess potential issues.
 * Constructed a Variance Inflation Factor (VIF) to adress any multicollinearity concerns that I was not able to see with plots and ispection.
 * The dataset is now ready for modeling!
-* 
+
 ### Linear Modeling:
 The following relate to linear_modeling.py:
-* Transformed prices to log prices to use as a response variable based on previous insights.
-* For all the models the following took place:
-- Splitted the dataset into training set and test set (80%-20%)
+
+* Transformed prices to log prices to use as a response variable based on previous insights. 
+* Constructed all the models based on the following workflow:
+Splitted the dataset into training set and test set (80-20 split). Created a pipeline to transform and scale features. Fitted the pipeline to the training data. Predicted using the features test set. Performed a 10-Fold Cross Validation on the training sets to assess model performance using R-squared as the metric. Made a decision rule to assess if the model overfits. Transformed log prices back to prices in order to plot actual vs predicted prices and relative errors. Calculated Mean Absolute Error and Root Mean Squared Error as additional metrics.
+* 
 
 
 Note that additional comments regarding the code and the analysis can be found in the .py files.
