@@ -121,7 +121,7 @@ The following relate to nonlinear_modeling.py:
 * Performed Permutation Feature Importances (PIF) to optimize further the models by selecting a subset of features deemed as important.
 * Re-fitted and re-tuned the models post PIF.
 
-\*Note that additional comments regarding the code and the analysis can be found in the .py files.
+\* Note that additional comments regarding the code and the analysis can be found in the .py files.
 
 \* Note that graphs generated during the analysis can be found in the graphs folder.
 
