@@ -165,20 +165,19 @@ Overall, the results show clearly that GBM is the best model to predict car pric
 2. Clone the repository
    ```bash
    git clone https://github.com/plorentzos/Predictions-of-Car-Prices-Using-Linear-and-Machine-Learning-Models.git
-3. Open the repository using your preferred IDE(e.g. VS Code).
-4. Navigate to the project directory
+3. Navigate to the project directory
     ```bash
     cd Predictions-of-Car-Prices-Using-Linear-and-Machine-Learning-Models
-5. Create a virtual environment
+4. Create a virtual environment
     ```bash
     python -m venv venv
-6. Activate the virtual environment according to the operating system you use, e.g. for Windows I use:
+5. Activate the virtual environment according to the operating system you use, e.g. for Windows I use:
     ```bash
     venv\Scripts\activate
-7. Install the necessary libraries in the activated virtual environment
+6. Install the necessary libraries in the activated virtual environment
    ```bash
    python -m pip install -r requirements.txt
-8. Run the Python scripts in the following order:
+7. Run the Python scripts in the following order:
    ```bash
    python toyota_cleaned.py
    python prices_insights.py
