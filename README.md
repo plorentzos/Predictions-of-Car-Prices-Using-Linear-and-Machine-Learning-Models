@@ -164,7 +164,7 @@ Overall, the results show clearly that GBM is the best model to predict car pric
 3. Open the repository using your preferred IDE(e.g. VS Code).
 4. Navigate to the project folder where you saved the repo:
    cd Predictions-of-Car-Prices-Using-Linear-and-Machine-Learning-Models
-5. Create a virtual environment using uv: python -m venv your_preferred_venv_name
+5. Create a virtual environment: python -m venv your_preferred_venv_name
 6. Activate the virtual environment according to the operating system you use(e.g. Windows).
 7. Install the necessary libraries in the activated virtual environment:
    python -m pip install -r requirements.txt
