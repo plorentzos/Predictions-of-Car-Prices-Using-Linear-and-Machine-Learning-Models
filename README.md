@@ -159,13 +159,15 @@ For all of the models there are no signs of overfitting or test R-squared being 
 Overall, the results show clearly that GBM is the best model to predict car prices with the given dataset.
 
 ## How to Run 
-1. Make sure you have at least Python version 3.9+ installed in your personal computer.
+1. Make sure you have Python3 installed in your personal computer.
 2. Clone the repository.
 3. Open the repository using your preferred IDE(e.g. VS Code).
 4. Navigate to the project folder where you saved the repo:
    cd Predictions-of-Car-Prices-Using-Linear-and-Machine-Learning-Models
 5. Create a virtual environment using uv: python -m venv your_preferred_venv_name
-6. Activate the virtual environment according to the operating system you use(e.g. Windows, Linux, macOS).
+6. Activate the virtual environment according to the operating system you use(e.g. Windows).
 7. Install the necessary libraries in the activated virtual environment:
    python -m pip install -r requirements.txt
 8. Run the python scripts in this order: toyota_cleaned.py -> prices_insights.py -> feature_engineering.py -> linear_modeling.py -> nonlinear_modeling.py
+
+\* Please note that nonlinear_modeling.py includes grid searches that take a significant time to run. Before running the file, open it and find the sections that include GridSearchCV (use can use CTRL+F and write GridSearchCV to find the sections). Then, read the comments above these sections to modify the parameter grids in order to run the code faster.
