@@ -159,7 +159,7 @@ For all of the models there are no signs of overfitting or test R-squared being 
 Overall, the results show clearly that GBM is the best model to predict car prices with the given dataset.
 
 ## How to Run 
-1. Make sure you have Python 3.9+ installed in your personal computer. You can download it from https://www.python.org/downloads/
+1. Make sure you have Python 3.9+ installed in your personal computer. You can download it from: https://www.python.org/downloads/
    ```bash
    python --version
 2. Clone the repository
@@ -168,7 +168,7 @@ Overall, the results show clearly that GBM is the best model to predict car pric
 3. Navigate to the project directory
     ```bash
     cd Predictions-of-Car-Prices-Using-Linear-and-Machine-Learning-Models
-4. Create a virtual environment
+4. Create a virtual environment. For more info visit: https://docs.python.org/3/library/venv.html
     ```bash
     python -m venv venv
 5. Activate the virtual environment according to the operating system you use, e.g. for Windows I use:
