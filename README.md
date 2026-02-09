@@ -77,6 +77,7 @@ Here is the list of the variables that can be found in the raw dataset:
 
 
 \* Note that graphs generated during the analysis can be found in the graphs folder.
+
 \* Note that you can always delete the  graphs folder when you clode the repo. They will get generated again when you run the .py scripts.
 
 ## Tools and Technologies
