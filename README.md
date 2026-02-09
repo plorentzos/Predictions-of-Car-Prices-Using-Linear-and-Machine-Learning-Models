@@ -159,25 +159,31 @@ For all of the models there are no signs of overfitting or test R-squared being 
 Overall, the results show clearly that GBM is the best model to predict car prices with the given dataset.
 
 ## How to Run 
-1. **Make sure you have Python 3.8+ installed in your personal computer**
+1. Make sure you have Python 3.8+ installed in your personal computer
    ```bash
    python --version
-3. Clone the repository via typing in your terminal: git clone https://github.com/plorentzos/Predictions-of-Car-Prices-Using-Linear-and-Machine-Learning-Models.git
-4. Open the repository using your preferred IDE(e.g. VS Code).
-5. Navigate to the project directory: cd Predictions-of-Car-Prices-Using-Linear-and-Machine-Learning-Models
-6. Create a virtual environment: python -m venv venv
-7. Activate the virtual environment according to the operating system you use, e.g. for Windows I type in my terminal: venv\Scripts\activate
-8. Install the necessary libraries in the activated virtual environment:
+2. Clone the repository
+   ```bash
+   git clone https://github.com/plorentzos/Predictions-of-Car-Prices-Using-Linear-and-Machine-Learning-Models.git
+3. Open the repository using your preferred IDE(e.g. VS Code).
+4. Navigate to the project directory
+    ```bash
+    cd Predictions-of-Car-Prices-Using-Linear-and-Machine-Learning-Models
+5. Create a virtual environment
+    ```bash
+    python -m venv venv
+6. Activate the virtual environment according to the operating system you use, e.g. for Windows I use:
+    ```bash
+    venv\Scripts\activate
+7. Install the necessary libraries in the activated virtual environment
+   ```bash
    python -m pip install -r requirements.txt
-9. Run the Python scripts in the following order:
-
+8. Run the Python scripts in the following order:
    ```bash
    python toyota_cleaned.py
    python prices_insights.py
    python feature_engineering.py
    python linear_modeling.py
    python nonlinear_modeling.py
-
-
 
 \* Please note that nonlinear_modeling.py includes grid searches that take a significant time to run. Before running the file, open it and find the sections that include GridSearchCV (use can use CTRL+F and write GridSearchCV to find the sections). Then, read the comments above these sections to modify the parameter grids in order to run the code faster.
