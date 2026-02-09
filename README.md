@@ -185,4 +185,4 @@ Overall, the results show clearly that GBM is the best model to predict car pric
    python linear_modeling.py
    python nonlinear_modeling.py
 
-\* Please note that nonlinear_modeling.py includes grid searches that take a significant time to run. Before running the file, open it and find the sections that include GridSearchCV (use can use CTRL+F and write GridSearchCV to find the sections). Then, read the comments above these sections to modify the parameter grids in order to run the code faster.
+\* Please note that nonlinear_modeling.py includes grid searches that take a significant time to run. Before running the file, open it and find the sections that include GridSearchCV (use can use CTRL+F and write GridSearchCV to find the sections). Then, read the comments above these sections to modify the parameter grid dictionaries in order to run the code faster.
