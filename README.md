@@ -167,12 +167,15 @@ Overall, the results show clearly that GBM is the best model to predict car pric
 6. Activate the virtual environment according to the operating system you use, e.g. for Windows I type in my terminal: venv\Scripts\activate
 7. Install the necessary libraries in the activated virtual environment:
    python -m pip install -r requirements.txt
-8. Run the python scripts in this order:
-python toyota_cleaned.py
-python prices_insights.py
-python feature_engineering.py
-python linear_modeling.py
-python nonlinear_modeling.py
+8. Run the Python scripts in the following order:
+
+   ```bash
+   python toyota_cleaned.py
+   python prices_insights.py
+   python feature_engineering.py
+   python linear_modeling.py
+   python nonlinear_modeling.py
+
 
 
 \* Please note that nonlinear_modeling.py includes grid searches that take a significant time to run. Before running the file, open it and find the sections that include GridSearchCV (use can use CTRL+F and write GridSearchCV to find the sections). Then, read the comments above these sections to modify the parameter grids in order to run the code faster.
