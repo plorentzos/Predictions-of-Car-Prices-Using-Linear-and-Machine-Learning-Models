@@ -76,10 +76,6 @@ Here is the list of the variables that can be found in the raw dataset:
 - `Tow_Bar` – Binary indicator of tow bar (1 = yes, 0 = no)
 
 
-\* Note that graphs generated during the analysis can be found in the graphs folder.
-
-\* Note that you can always delete the  graphs folder when you clode the repo. They will get generated again when you run the .py scripts.
-
 ## Tools and Technologies
 * Python (Libraries: os, Pandas, NumPy, Seaborn, Matplotlib, sklearn)
 
@@ -125,7 +121,11 @@ The following relate to nonlinear_modeling.py:
 * Performed Permutation Feature Importances (PIF) to optimize further the models by selecting a subset of features deemed as important.
 * Re-fitted and re-tuned the models post PIF.
 
-Note that additional comments regarding the code and the analysis can be found in the .py files.
+\*Note that additional comments regarding the code and the analysis can be found in the .py files.
+
+\* Note that graphs generated during the analysis can be found in the graphs folder.
+
+\* Note that you can always delete the  graphs folder when you clode the repo. They will get generated again when you run the .py scripts.
 
 ## Assumptions
 * The dataset's size is large enough to train/test split and apply the various statistical methods and models.
