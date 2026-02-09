@@ -76,9 +76,8 @@ Here is the list of the variables that can be found in the raw dataset:
 - `Tow_Bar` – Binary indicator of tow bar (1 = yes, 0 = no)
 
 
-Note that datasets that are generated during the analysis can be found in data_created folder in the data folder.
-Note that graphs generated during the analysis can be found in the graphs folder.
-Note that you can always delete the data_created and graphs folder. They will get generated again when you run the .py files in the folder you save the cloned repository.
+\* Note that graphs generated during the analysis can be found in the graphs folder.
+\* Note that you can always delete the  graphs folder when you clode the repo. They will get generated again when you run the .py scripts.
 
 ## Tools and Technologies
 * Python (Libraries: os, Pandas, NumPy, Seaborn, Matplotlib, sklearn)
