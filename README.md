@@ -21,7 +21,7 @@ Multiple models are constructed based on standard textbook statistical and mathe
 
 Instead of just presenting "the single best model", the analysis presents findings from multiple traditional and state-of-the-art models that serve as robustness checks for the most optimal model. 
 
-Essentially, as it can been seen in the code the modeling logic is to start simple and build stepwise better (and perhaps more complicated) methods in order to arrive to the optimal result. This logic gives the reader not only a better sense in the coding workflow but also depicts the intuition behind the choices taken during the project.
+Essentially, the modeling logic is to start simple and build stepwise better (and perhaps more complicated) models in order to arrive to the optimal result. This logic gives the reader not only a better sense in the coding workflow but also depicts the intuition behind the choices taken during the project.
 
 The analysis is performed in Python programming language. The IDE used is Visual Studio Code. 
 
@@ -125,7 +125,7 @@ The following relate to nonlinear_modeling.py:
 
 \* Note that graphs generated during the analysis can be found in the graphs folder.
 
-\* Note that you can always delete the  graphs folder when you clode the repo. They will get generated again when you run the .py scripts.
+\* Note that the datasets generated during the analysis can be found in the data folder.
 
 ## Assumptions
 * The dataset's size is large enough to train/test split and apply the various statistical methods and models.
