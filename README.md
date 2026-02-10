@@ -21,7 +21,7 @@ Multiple models are constructed based on standard textbook statistical and mathe
 
 Instead of just presenting "the single best model", the analysis presents findings from multiple traditional and state-of-the-art models that serve as robustness checks for the most optimal model. 
 
-Essentially, the modeling logic is to start simple and build stepwise better (and perhaps more complicated) models in order to arrive to the optimal result. This logic gives the reader not only a better sense in the coding workflow but also depicts the intuition behind the choices taken during the project.
+Essentially, the modeling logic is to start simple and build stepwise better (and perhaps more complicated) models in order to arrive to the optimal result. This logic gives the reader not only a better sense of the coding workflow but also depicts the intuition behind the choices taken during the project.
 
 The analysis is performed in Python programming language. The IDE used is Visual Studio Code. 
 
