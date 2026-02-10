@@ -8,8 +8,7 @@ __pycache__/
 # Jupyter
 .ipynb_checkpoints/
 
-# Generated output
-graphs/
+
 
 
 
