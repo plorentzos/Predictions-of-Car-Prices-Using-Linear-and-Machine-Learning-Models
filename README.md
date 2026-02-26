@@ -159,6 +159,8 @@ For all of the models there are no signs of overfitting or test R-squared being 
 Overall, the results show clearly that GBM is the best model to predict car prices with the given dataset.
 
 ## How to Run 
+The set up instructions below were tested on Windows 11. The project should also run on Linux and macOS but some of the steps may differ. If you are using Linux or macOS adapt the commands accordingly.
+
 1. Make sure you have Python 3.9+ installed in your personal computer. You can download it from: https://www.python.org/downloads/. Then make sure the minimum required version of Python is installed by typing in your terminal:
    ```bash
    python --version
