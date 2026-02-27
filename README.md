@@ -173,13 +173,23 @@ The set up instructions below were tested on Windows 11. The project should also
 4. Create a virtual environment. For more info visit: https://docs.python.org/3/library/venv.html
     ```bash
     python -m venv venv
-5. Activate the virtual environment according to the operating system you use, e.g. for Windows I use:
-    ```bash
-    venv\Scripts\activate
-6. Install the necessary libraries in the activated virtual environment
+5. Activate the virtual environment according to the operating system you use.
+
+   **Windows**
+
+   ```bash
+   venv\Scripts\activate
+   ```
+
+   **Linux \ macOS**
+
+   ```bash
+   source venv/bin/activate
+   ```
+7. Install the necessary libraries in the activated virtual environment
    ```bash
    python -m pip install -r requirements.txt
-7. Run the Python scripts in the following order:
+8. Run the Python scripts in the following order:
    ```bash
    python toyota_cleaned.py
    python prices_insights.py
