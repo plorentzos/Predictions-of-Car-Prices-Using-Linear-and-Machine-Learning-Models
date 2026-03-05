@@ -134,7 +134,7 @@ The following relate to nonlinear_modeling.py:
 * A number of features that are in dataset introduce noise to the models since they add irrelevant information. Hence, they are dropped before modeling.
 * Used Ordinary Least Squares methods initially to understand what is happening with the dataset and gain insights since OLS is easy to interpret. For OLS methods, the error terms are assumed to be normally distributed with 0 mean and finite variance.
 * Instead of relying to more advanced econometric methods,  ML algorithms were employed since we do predictions and not causal inference. The dataset is sizeable enough for these methods.
-* As a primary measure to evaluate the predictions, R-squared is used. However, MAE is the primary metric of interest.
+* As a measure to evaluate the predictions, R-squared is used. However, MAE is the primary metric of interest.
 
  
 ## Insights
